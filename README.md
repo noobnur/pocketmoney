@@ -1,4 +1,23 @@
-#Pocket Money App
+# Pocket Money App
+
+## Components
+1. BudgetApp
+ 1. SalaryInput
+ 2. SavingsInput
+    1. PersonalGoal
+    2. JointGoal
+    3. Emergency
+ 3. ExpensesInput
+    1. TuitionFeeLoan
+    2. GeneralAssemblyLoan
+    3. PhoneBill
+    4. FamilyExpenses
+    5. FoodExpenses
+    6. TransportExpenses
+    7. OtherExpenses
+ 4. ExperienceWealth
+
+
 
 
 
