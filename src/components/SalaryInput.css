@@ -4,4 +4,19 @@
 
 .all-budgets {
   border: 1px solid #D3D3D3;
+  padding: 15px;
+}
+
+.budget-form,
+.budget-form > input {
+  text-align: right;
+}
+
+.budget-value {
+  border: 1px solid #D3D3D3;
+  text-align: left;
+}
+
+.budget-percentage {
+  margin-bottom: 10px;
 }

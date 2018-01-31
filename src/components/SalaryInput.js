@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './SalaryInput.css';
+import { Grid, Row, Col } from 'react-bootstrap';
 
 
 class SalaryInput extends Component {
@@ -26,7 +27,7 @@ class SalaryInput extends Component {
         salaryInput: event.target.value,
         savingsValue: (event.target.value) * (this.state.savingsPercentage/100),
         expensesValue: (event.target.value) * (this.state.expensesPercentage/100),
-        wealthValue: (event.target.value) * 0.05
+        wealthValue: (event.target.value) * (this.state.wealthPercentage/100)
       });
     }
 
@@ -57,38 +58,58 @@ class SalaryInput extends Component {
          <div className="big-budget">
            <div className="full-salary">
             <form>
-              <label>SalaryInput: $ </label>
+              <label><h4>Salary: $ </h4></label>
               <input type="text" name="name" placeholder="eg. 3000" value={this.state.salaryInput} onChange={this.handleChange} />
             </form>
            </div>
            <div className="all-budgets">
 
-             <div className="savings-percentage">
-               <form>
+           <Grid>
+
+             <Row className="budget-percentage">
+              <Col xs={7} md={6}>
+               <form className="budget-form">
                  <input type="number" name="savings-num" min="0" max="100" placeholder="45" value={this.state.savingsPercentage} onChange={this.savingsPercentageChange}/>
-                 <label> % : Savings </label>
+                 <label><h5> % : Savings </h5></label>
                </form>
-               <div className="savings-budget">$ {this.state.savingsValue}</div>
-             </div>
+               </Col>
+               <Col xs={5} md={3}>
+               <div className="budget-value">
+                  <h5>$ {this.state.savingsValue}</h5>
+                  </div>
+               </Col>
+             </Row>
 
-              <div className="expenses-percentage">
-               <form>
-                 <input type="number" name="expenses-num" min="0" max="100" placeholder="50" value={this.state.expensesPercentage} onChange={this.expensesPercentageChange}/>
-                 <label> % : Expenses </label>
-               </form>
-               <div className="expenses-budget">$ {this.state.expensesValue}</div>
-             </div>
+              <Row className="budget-percentage">
+               <Col xs={7} md={6}>
+                <form className="budget-form">
+                  <input type="number" name="expenses-num" min="0" max="100" placeholder="50" value={this.state.expensesPercentage} onChange={this.expensesPercentageChange}/>
+                  <label><h5> % : Expenses </h5></label>
+                </form>
+                </Col>
+                <Col xs={5} md={3}>
+                  <div className="budget-value">
+                    <h5>$ {this.state.expensesValue}</h5>
+                  </div>
+                 </Col>
+             </Row>
 
 
-             <div className="wealth-percentage">
-               <form>
+             <Row className="budget-percentage">
+              <Col xs={7} md={6}>
+               <form className="budget-form">
                  <input type="number" name="wealth-num" min="0" max="100" placeholder="5" value={this.state.wealthPercentage} onChange={this.wealthPercentageChange}  />
-                 <label> % : Wealth/Experience </label>
+                 <label><h5> % : Wealth/Experience </h5></label>
                </form>
-               <div className="wealth-budget">$ {this.state.wealthValue}</div>
-             </div>
+               </Col>
+               <Col xs={5} md={3}>
+                <div className="budget-value">
+                  <h5>$ {this.state.wealthValue}</h5>
+               </div>
+               </Col>
+             </Row>
 
-
+             </Grid>
 
            </div>
           </div>
