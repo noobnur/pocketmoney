@@ -20,3 +20,8 @@
 .budget-percentage {
   margin-bottom: 10px;
 }
+
+.MiniBudget {
+  margin-top: 10px;
+  border: 2px solid green;
+}

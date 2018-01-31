@@ -10,9 +10,10 @@ class App extends Component {
       <h4>Save before you spend! <br/>
       <strong>Pocket Money App</strong> will help you calculate and track your savings and expenditure. <br/>
       Never miss out on your savings goal again! </h4>
-        <div className="BudgetApp">
+        <div className="BigBudget">
           <SalaryInput />
         </div>
+
       </div>
     );
   }

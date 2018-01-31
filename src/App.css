@@ -27,6 +27,6 @@
   to { transform: rotate(360deg); }
 }
 
-.BudgetApp {
-  border: 1px solid red;
+.BigBudget{
+  border: 1px solid black;
 }

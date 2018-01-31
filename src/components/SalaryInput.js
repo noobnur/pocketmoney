@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './SalaryInput.css';
 import { Grid, Row, Col } from 'react-bootstrap';
+import SavingsInput from './SavingsInput';
+
 
 
 class SalaryInput extends Component {
@@ -110,6 +112,10 @@ class SalaryInput extends Component {
              </Row>
 
              </Grid>
+
+             <div className="MiniBudget">
+               <SavingsInput savingsFromParent = {this.state.savingsValue}/>
+             </div>
 
            </div>
           </div>
