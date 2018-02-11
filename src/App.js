@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import SalaryInput from './components/SalaryInput';
+import firebase from './firebase.js';
 
 class App extends Component {
   render() {
@@ -13,7 +14,6 @@ class App extends Component {
         <div className="BigBudget">
           <SalaryInput />
         </div>
-
       </div>
     );
   }
