@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import SalaryInput from './components/SalaryInput';
-import firebase from './firebase.js';
+// import firebase from './firebase.js';
 
 class App extends Component {
   render() {
