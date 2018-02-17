@@ -37,7 +37,7 @@ confirmVal() {
     return (
       <div>
       <label><h5> {this.state.personalGoal}</h5></label>
-      <Button onClick={this.confirmVal}>hello</Button>
+      <Button onClick={this.confirmVal}><h4>confirm?</h4></Button>
       <div>
 
       </div>
@@ -73,7 +73,7 @@ class CoupleSavings extends Component {
     return (
       <div>
       <label><h5> {this.state.coupleGoal}</h5></label>
-      <Button onClick={this.confirmVal}>hello</Button>
+      <Button onClick={this.confirmVal}><h4>confirm?</h4></Button>
       </div>
     )
   }
@@ -106,7 +106,7 @@ class EmergencyFund extends Component {
     return (
       <div>
       <label><h5> {this.state.emergencyFund}</h5></label>
-      <Button onClick={this.confirmVal}>hello</Button>
+      <Button onClick={this.confirmVal}><h4>confirm?</h4></Button>
       </div>
     )
   }

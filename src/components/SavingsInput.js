@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
 import './SavingsInput.css';
 import { PersonalSavings, CoupleSavings, EmergencyFund } from './FinalSavingsAmt';
-import firebase from '../firebase.js';
+import * as firebase from 'firebase';
 
 
 class SavingsInput extends Component {
@@ -61,33 +61,23 @@ emergencyCallBack = (val) => {
 }
 
 anotherFn = () => {
-  console.log(this.state.personalVal),
-  console.log(this.state.coupleVal),
-  console.log(this.state.emergencyVal)
+
+  var newVals = {
+    personalSavingsGoal:this.state.personalVal,
+    coupleSavingsGoal:this.state.coupleVal,
+    emergencyFund:this.state.emergencyVal
+  }
+
+  console.log(newVals)
+
+firebase.database().ref().child('fb-savings').push({
+    date: new Date(Date.now()).toLocaleString(),
+    personalSavingsGoal:"$"+this.state.personalVal,
+    coupleSavingsGoal:"$"+this.state.coupleVal,
+    emergencyFund:"$"+this.state.emergencyVal
+  })
 }
 
-// handleSubmit(e) {
-//   e.preventDefault();
-//   const itemsRef = firebase.database().ref('items');
-//   const item = {
-//     title: this.state.currentItem,
-//     user: this.state.username
-//   }
-//   itemsRef.push(item);
-//   this.setState({
-//     currentItem: '',
-//     username: ''
-//   });
-// }
-
-
-// componentWillMount() {
-//   this.firebaseREf = new Firebase("https://pocketmoney-4afe9.firebaseio.com")
-// }
-//
-// componentDidMount() {
-//   console.log(this.props.children)
-// }
 
 
   render () {
@@ -134,7 +124,6 @@ anotherFn = () => {
 
       <Button onClick={this.anotherFn} bsStyle="success">Save the amounts</Button>
 
-      <div> Button </div>
 
 
       </div>
