@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './SalaryInput.css';
 import { Grid, Row, Col } from 'react-bootstrap';
 import SavingsInput from './SavingsInput';
+import ExpenseInput from './ExpenseInput';
 
 
 
@@ -36,21 +37,21 @@ class SalaryInput extends Component {
     savingsPercentageChange(event) {
       this.setState({
         savingsPercentage: event.target.value,
-        savingsValue: this.state.salaryInput * (event.target.value/100)
+        savingsValue: (this.state.salaryInput * (event.target.value/100)).toFixed(2)
       })
     }
 
     expensesPercentageChange(event) {
       this.setState({
         expensesPercentage: event.target.value,
-        expensesValue: this.state.salaryInput * (event.target.value/100)
+        expensesValue: (this.state.salaryInput * (event.target.value/100)).toFixed(2)
       })
     }
 
     wealthPercentageChange(event) {
       this.setState({
         wealthPercentage: event.target.value,
-        wealthValue: this.state.salaryInput * (event.target.value/100)
+        wealthValue: (this.state.salaryInput * (event.target.value/100)).toFixed(2)
       })
     }
 
@@ -69,13 +70,13 @@ class SalaryInput extends Component {
            <Grid>
 
              <Row className="budget-percentage">
-              <Col xs={7} md={6}>
+              <Col xs={3} md={6}>
                <form className="budget-form">
                  <input type="number" name="savings-num" min="0" max="100" placeholder="45" value={this.state.savingsPercentage} onChange={this.savingsPercentageChange}/>
                  <label><h5> % : Savings </h5></label>
                </form>
                </Col>
-               <Col xs={5} md={3}>
+               <Col xs={3} md={3}>
                <div className="budget-value">
                   <h5>$ {this.state.savingsValue}</h5>
                   </div>
@@ -83,13 +84,13 @@ class SalaryInput extends Component {
              </Row>
 
               <Row className="budget-percentage">
-               <Col xs={7} md={6}>
+               <Col xs={3} md={6}>
                 <form className="budget-form">
                   <input type="number" name="expenses-num" min="0" max="100" placeholder="50" value={this.state.expensesPercentage} onChange={this.expensesPercentageChange}/>
                   <label><h5> % : Expenses </h5></label>
                 </form>
                 </Col>
-                <Col xs={5} md={3}>
+                <Col xs={3} md={3}>
                   <div className="budget-value">
                     <h5>$ {this.state.expensesValue}</h5>
                   </div>
@@ -98,13 +99,13 @@ class SalaryInput extends Component {
 
 
              <Row className="budget-percentage">
-              <Col xs={7} md={6}>
+              <Col xs={3} md={6}>
                <form className="budget-form">
                  <input type="number" name="wealth-num" min="0" max="100" placeholder="5" value={this.state.wealthPercentage} onChange={this.wealthPercentageChange}  />
                  <label><h5> % : Wealth/Experience </h5></label>
                </form>
                </Col>
-               <Col xs={5} md={3}>
+               <Col xs={3} md={3}>
                 <div className="budget-value">
                   <h5>$ {this.state.wealthValue}</h5>
                </div>
@@ -113,9 +114,21 @@ class SalaryInput extends Component {
 
              </Grid>
 
-             <div className="MiniBudget">
-               <SavingsInput savingsFromParent = {this.state.savingsValue}/>
-             </div>
+
+                 <Col xs={6}>
+                 <div className="MiniBudget">
+                   <SavingsInput savingsFromParent = {this.state.savingsValue}/>
+                 </div>
+                 </Col>
+
+                 <Col xs={6}>
+                 <div className="MiniExpense">
+                   <ExpenseInput expenseFromParent = {this.state.expensesValue}/>
+                 </div>
+                 </Col>
+
+                 
+
 
            </div>
           </div>

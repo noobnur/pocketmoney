@@ -23,11 +23,5 @@
 
 .MiniBudget {
   margin-top: 10px;
-  margin-right: 10px;
   border: 2px solid green;
-}
-
-.MiniExpense {
-  margin-top: 10px;
-  border: 2px solid red;
 }

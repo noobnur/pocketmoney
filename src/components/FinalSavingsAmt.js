@@ -14,23 +14,14 @@ class PersonalSavings extends Component {
 
   componentWillReceiveProps(nextProps) {
       this.setState({
-        personalGoal: nextProps.savingsFromParent * (nextProps.personalGoalPercentage/100)
+        personalGoal: (nextProps.savingsFromParent * (nextProps.personalGoalPercentage/100)).toFixed(2)
       })
     }
 
-  // componentWillUpdate(nextProps, nextState) {
-  //   console.log(nextState.personalGoal)
-  // }
-
-// componentDidUpdate(prevProps, prevState, nextState) {
-//   console.log(prevProps, prevState, this.state.personalGoal)
-//
-// }
 
 confirmVal() {
   var personalData = this.state.personalGoal
   this.props.saveGoal(personalData)
-  // console.log(personalData)
 }
 
   render () {
@@ -59,7 +50,7 @@ class CoupleSavings extends Component {
   componentWillReceiveProps(nextProps) {
     // console.log(nextProps)
       this.setState({
-        coupleGoal: nextProps.savingsFromParent * (nextProps.coupleGoalPercentage/100)
+        coupleGoal: (nextProps.savingsFromParent * (nextProps.coupleGoalPercentage/100)).toFixed(2)
       })
   }
 
@@ -90,16 +81,14 @@ class EmergencyFund extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    // console.log(nextProps)
       this.setState({
-        emergencyFund: nextProps.savingsFromParent * (nextProps.emergencyFundPercentage/100)
+        emergencyFund: (nextProps.savingsFromParent * (nextProps.emergencyFundPercentage/100)).toFixed(2)
       })
   }
 
   confirmVal() {
     var emergencyFund = this.state.emergencyFund
     this.props.emergencyCall(emergencyFund)
-    // console.log(personalData)
   }
 
   render () {
