@@ -9,7 +9,8 @@ class ExpenseInput extends Component {
     super(props);
 
     this.state = {
-      TuitionFeeLoan:0,
+      ExpenseBudget: 0,
+      TuitionFeeLoan:250,
       GeneralAssemblyLoan:0,
       PhoneBill:0,
       FamilyExpenses:0,
@@ -17,13 +18,20 @@ class ExpenseInput extends Component {
       TransportExpenses:0,
       OtherExpenses:0
     }
+  }
 
+  componentWillReceiveProps(nextProps) {
+    console.log(nextProps)
+    this.setState({
+      ExpenseBudget: nextProps.expenseFromParent - this.state.TuitionFeeLoan
+    })
   }
 
   render () {
     return (
       <div>
-        <h4>My Expense Budget {this.props.expenseFromParent}</h4>
+        <h4>Total Budget {this.props.expenseFromParent}</h4>
+        <h4>After Bills Expense Budget {this.state.ExpenseBudget}</h4>
 
       <Button bsStyle="danger">Confirm Expense Budget</Button>
 
