@@ -1,5 +1,21 @@
 # Pocket Money App
 
+Published on https://noobnur.github.io/pocketmoney/
+
+## Back story
+
+This is a personal project for me to
+1. Quickly calculate how much of my salary should be budgeted for saving and expense.
+2. Learn how to use REACT.js library for the calculations part
+3. Learn how to use Firebase as my database
+
+## Some useful resources I've learnt from
+1. React
+- Thinking in REACT - https://reactjs.org/docs/thinking-in-react.html
+- REACT lifecycle (super useful for newbies): https://developmentarc.gitbooks.io/react-indepth/content/life_cycle/the_life_cycle_recap.html
+- Passing Data between REACT components: https://medium.com/@ruthmpardee/passing-data-between-react-components-103ad82ebd17
+- Persistant REACT Data to Firebase: https://www.youtube.com/watch?v=QY7Ibl37_08
+
 ## Components
 1. BudgetApp
  1. SalaryInput
@@ -11,11 +27,6 @@
     1. TuitionFeeLoan
     2. GeneralAssemblyLoan
     3. PhoneBill
-    4. FamilyExpenses
-    5. FoodExpenses
-    6. TransportExpenses
-    7. OtherExpenses
- 4. ExperienceWealth
 
 
 
