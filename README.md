@@ -16,6 +16,12 @@ This is a personal project for me to
 - Passing Data between REACT components: https://medium.com/@ruthmpardee/passing-data-between-react-components-103ad82ebd17
 - Persistant REACT Data to Firebase: https://www.youtube.com/watch?v=QY7Ibl37_08
 
+
+## things to improve on
+- The code has A LOT of repetition: will clean that up soon.
+- Design elements: it really looks bare now.
+
+
 ## Components
 1. BudgetApp
  1. SalaryInput

@@ -25,4 +25,5 @@ class TotalBills extends Component {
   }
 }
 
+
 export {TotalBills}
