@@ -2,6 +2,10 @@
 
 Published on https://noobnur.github.io/pocketmoney/
 
+To build and deploy, run:
+```yarn build```
+and then ```yarn deploy```
+
 ## Back story
 
 This is a personal project for me to
@@ -34,7 +38,7 @@ Calculate
 3. Edit the Savings and Expenses components
  1. Allow users to change a title for the amounts
  2. Allow users to add more titles and calculation parts
- 
+
 
 ## Components
 1. BudgetApp

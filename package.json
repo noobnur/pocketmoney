@@ -13,7 +13,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
+<<<<<<< HEAD
     "deploy" : "npm run build&&gh-pages -b build"
+=======
+    "deploy" : "npm run build&&gh-pages -b master -d build"
+>>>>>>> 8af17e6... edit readme
   },
   "devDependencies": {
     "firebase": "^4.9.1",
