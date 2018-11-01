@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 
 class TotalBills extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
 
     this.state = {
-      updatedTotalBill: 300,
+      updatedTotalBill: 300
     }
   }
 
-  componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps (nextProps) {
     console.log(nextProps)
     this.setState({
       updatedTotalBill: Number(nextProps.TFLbillamount) + Number(nextProps.GAbillamount) + Number(nextProps.PhoneBillamount),
@@ -19,7 +19,7 @@ class TotalBills extends Component {
   render () {
     return (
       <div>
-      <h4>{this.state.updatedTotalBill}</h4>
+        <h4>{this.state.updatedTotalBill}</h4>
       </div>
     )
   }
