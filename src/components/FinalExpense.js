@@ -5,7 +5,7 @@ class TotalBills extends Component {
     super(props)
 
     this.state = {
-      updatedTotalBill: 450,
+      updatedTotalBill: 300,
     }
   }
 
