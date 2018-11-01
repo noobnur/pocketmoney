@@ -11,12 +11,12 @@ class ExpenseInput extends Component {
 
     this.state = {
       ExpenseBudget: 0,
-      TuitionFeeLoan:250,
-      GALoan:100,
-      PhoneBill:100,
+      TuitionFeeLoan: 250,
+      GALoan: 100,
+      PhoneBill: 50,
       TFLpaid: false,
       GApaid: false,
-      Phonepaid: false,
+      Phonepaid: false
     }
 
     this.updateTFL = this.updateTFL.bind(this);
