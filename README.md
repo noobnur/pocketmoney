@@ -37,7 +37,7 @@ Calculate
 2. How much each payment is actually deducting after we consider the interest on it
 3. Edit the Savings and Expenses components
  1. Allow users to change a title for the amounts
- 2. Allow users to add more titles and calculation parts
+ 2. Allow users to add more calculation parts
 
 
 ## Components

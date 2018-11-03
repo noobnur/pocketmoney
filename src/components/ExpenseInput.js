@@ -105,16 +105,20 @@ class ExpenseInput extends Component {
     return (
       <div>
         <h4>Total Budget {this.props.expenseFromParent}</h4>
-        <h5> TFL $ <input type="number" min="0" max="1000" placeholder="50" value={this.state.TuitionFeeLoan} onChange={this.updateTFL}/>
+        <h5>
+        <input type="text" name="newExpense" placeholder="TFL"/>
+         $ <input type="number" min="0" max="1000" placeholder="50" value={this.state.TuitionFeeLoan} onChange={this.updateTFL}/>
         {TFLbutton}
         </h5>
 
-        <h5> GA Loan $<input type="number" min="0" max="1000" placeholder="50" value={this.state.GALoan} onChange={this.updateGA}/>
+        <h5> <input type="text" name="newExpense" placeholder="GA Loan"/>
+        $<input type="number" min="0" max="1000" placeholder="50" value={this.state.GALoan} onChange={this.updateGA}/>
         {GAbutton}
         </h5>
 
 
-        <h5> Phone Bill $<input type="number" min="0" max="1000" placeholder="50" value={this.state.PhoneBill} onChange={this.updatePhone}/>
+        <h5> <input type="text" name="newExpense" placeholder="PhoneBill"/>
+         $<input type="number" min="0" max="1000" placeholder="50" value={this.state.PhoneBill} onChange={this.updatePhone}/>
         {Phonebutton}
         </h5>
 

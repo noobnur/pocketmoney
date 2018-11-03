@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
-
+import './SavingsInput.css';
 
 class PersonalSavings extends Component {
   constructor(props) {
@@ -26,13 +26,11 @@ confirmVal() {
 
   render () {
     return (
-      <div>
+      <span>
       <label><h5> {this.state.personalGoal}</h5></label>
-      <Button onClick={this.confirmVal}><h4>confirm?</h4></Button>
-      <div>
+      {/* <Button onClick={this.confirmVal}><h5>confirm?</h5></Button> */}
 
-      </div>
-      </div>
+      </span>
     )
   }
 }
@@ -62,10 +60,10 @@ class CoupleSavings extends Component {
 
   render () {
     return (
-      <div>
+      <span>
       <label><h5> {this.state.coupleGoal}</h5></label>
-      <Button onClick={this.confirmVal}><h4>confirm?</h4></Button>
-      </div>
+      {/*  <Button onClick={this.confirmVal}><h5>confirm?</h5></Button> */}
+      </span>
     )
   }
 }
@@ -93,10 +91,10 @@ class EmergencyFund extends Component {
 
   render () {
     return (
-      <div>
-      <label><h5> {this.state.emergencyFund}</h5></label>
-      <Button onClick={this.confirmVal}><h4>confirm?</h4></Button>
-      </div>
+      <span>
+      <h5> {this.state.emergencyFund}</h5>
+      {/*  <Button onClick={this.confirmVal}><h5>confirm?</h5></Button> */}
+      </span>
     )
   }
 }
